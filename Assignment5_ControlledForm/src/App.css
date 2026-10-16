@@ -1,0 +1,156 @@
+
+.page-container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.form-card,
+.preview-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.form-card h1,
+.preview-card h2 {
+    color: #1e293b;
+    margin-top: 0;
+}
+
+.form-card h1 {
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.subtitle,
+.preview-subtitle {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    color: #334155;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #1e293b;
+    font: inherit;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid #c7d2fe;
+    border-color: #4f46e5;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3730a3;
+}
+
+button:focus-visible {
+    outline: 2px solid #312e81;
+    outline-offset: 3px;
+}
+
+.preview-card {
+    border-top: 5px solid #4f46e5;
+}
+
+.preview-card h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.preview-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.preview-item:last-child {
+    border-bottom: none;
+}
+
+.preview-item span {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.preview-item p {
+    color: #1e293b;
+    margin: 7px 0 0;
+    overflow-wrap: anywhere;
+    line-height: 1.6;
+}
+
+.preview-message {
+    white-space: pre-wrap;
+}
+
+@media (max-width: 750px) {
+    .page-container {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+    }
+
+    .form-card,
+    .preview-card {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 380px) {
+    .page-container {
+        padding: 20px 12px;
+    }
+
+    .form-card,
+    .preview-card {
+        padding: 18px;
+    }
+}

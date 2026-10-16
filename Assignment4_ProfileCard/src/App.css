@@ -1,0 +1,160 @@
+
+.app-container {
+    min-height: 100vh;
+    padding: 50px 24px;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title {
+    color: #1e293b;
+    font-size: 36px;
+    margin: 0 0 10px;
+}
+
+.page-subtitle {
+    color: #64748b;
+    font-size: 15px;
+    margin: 0;
+}
+
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.profile-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.09);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.15);
+}
+
+.profile-banner {
+    height: 100px;
+    background: linear-gradient(135deg, #4f46e5, #818cf8);
+}
+
+.profile-image {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    margin: -60px auto 0;
+    position: relative;
+}
+
+.profile-content {
+    padding: 10px 22px 25px;
+}
+
+.profile-content h2 {
+    font-size: 22px;
+    color: #1e293b;
+    margin: 10px 0 6px;
+}
+
+.profile-role {
+    color: #4f46e5;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 16px;
+}
+
+.profile-description {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 96px;
+    margin: 0;
+}
+
+.skills-section {
+    margin-top: 18px;
+}
+
+.skills-section h3 {
+    color: #334155;
+    font-size: 15px;
+    margin: 0 0 12px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.skill {
+    background: #eef2ff;
+    color: #4338ca;
+    border-radius: 20px;
+    padding: 7px 11px;
+    font-size: 12px;
+}
+
+.profile-button {
+    margin-top: 24px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.profile-button:hover {
+    background: #3730a3;
+}
+
+.profile-button:focus-visible {
+    outline: 2px solid #312e81;
+    outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+    .profiles-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .app-container {
+        padding: 35px 16px;
+    }
+
+    .page-title {
+        font-size: 29px;
+    }
+
+    .profiles-grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+    }
+
+    .profile-description {
+        min-height: auto;
+    }
+}
